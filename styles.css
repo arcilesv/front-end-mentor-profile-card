@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --dark-cyan: hsl(185, 75%, 39%);
+    --desaturated-blue: hsl(229, 23%, 23%);
+    --grayish-blue: hsl(227, 10%, 46%);
+    --dark-gray: hsl(0, 0%, 59%);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Kumbh', sans-serif;
+    background-color: var(--dark-cyan);
+    background-image: url('/images/bg-pattern-top.svg'), url('/images/bg-pattern-bottom.svg');
+    background-position: top -600px left -250px, bottom -600px right -250px;
+    background-repeat: no-repeat, no-repeat;
+    color: var(--dark-gray);
+}
+
+
+.card {
+    height: 350px;
+    width: 350px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.card__header {
+    background-image: url('/images/bg-pattern-card.svg');
+    height: 150px;
+    width: 100%;
+}
+
+.card__header img {
+    border-radius: 50%;
+    border: 5px solid white;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50px;
+}
+
+.card__content {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    border-top: 1px solid var(--dark-gray);
+}
+
+.card__footer .stats {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.name,  .quantity {
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+}
+.age {
+    color: var(--dark-gray);
+    font-weight: 400;
+}
+
+
+@media (max-width:1080px){
+    body {
+        /* background-size: 90%, 90%; */
+        background-position: top -800px left -400px, bottom -800px right -400px;
+    }
+}
+
+@media (max-width:700px){
+    body {
+        background-size: 100%, 100%;
+        background-position: top -200px left -150px, bottom -100px right -150px;
+    }
+}
+
+@media (max-width:500px){
+    body {
+        background-size: 150%, 150%;
+        background-position: top -200px left -350px, bottom -250px right -300px;
+    }
+}
+
